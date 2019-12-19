@@ -23,7 +23,7 @@ sidebar = st.sidebar.selectbox('Select an Option',['Stocks', 'Crypto', 'Fixed In
 #Stock Page
 if sidebar == 'Stocks':
     dropdown = st.selectbox('Select a Ticker', tickers)
-    df = get_historical_data(dropdown, start, end, output_format='pandas', token='sk_0d614da79c6f4f1aa708c54d9a699d01')
+    df = get_historical_data(dropdown, start, end, output_format='pandas', token='YOUR API KEY')
     fig = px.line(df, x=df.index, y=df.close, title=str(dropdown)+' 2019 Performance')
     fig.update_xaxes(title='Date')
     fig.update_yaxes(title='Stock Price')
